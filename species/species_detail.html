@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Species Detail</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="species_detail.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a1a;
+      color: #f1f1f1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .back-btn {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #45a049;
+    }
+
+    .species-detail {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .species-detail h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .species-detail img {
+      max-width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .species-detail p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .species-detail strong {
+      color: #4CAF50;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Your header and navigation code here -->
+
+  <div id="page-container">
+    <main>
+      <div class="container">
+        <button onclick="goBack()" class="back-btn">Back to Species List</button>
+        <section class="species-detail">
+          <h2 id="common-name"></h2>
+          <img id="species-image" src="" alt="">
+          <p><strong>Scientific Name:</strong> <span id="scientific-name"></span></p>
+          <p><strong>Conservation Status:</strong> <span id="conservation-status"></span></p>
+          <p><strong>Habitat:</strong> <span id="habitat"></span></p>
+          <p><strong>Threats:</strong> <span id="threats"></span></p>
+          <p><strong>Information:</strong> <span id="information"></span></p>
+        </section>
+      </div>
+    </main>
+    <!-- Your footer code here -->
+  </div>
+  <script src="species_detail.js"></script>
+</body>
+
+</html>

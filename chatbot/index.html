@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask any question about fauna or animals of the whole world or Lithuania</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../species/species.html">Species</a></li>
+                    <li><a href="index.html">Chatbot</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="?lang=en">EN</a> |
+                <a href="?lang=lt">LT</a> |
+                <a href="?lang=ru">RU</a>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="chat-history">
+                    <h2>Ask any question about fauna or animals of the whole world or Lithuania</h2>
+                    <div class="chat-container">
+                        <div id="messages">
+                            <div class="message ai-message">
+                                <img src="icons/ai-icon.png" alt="AI Icon" class="message-icon">
+                                <p>Ask me anything about animals of the world or animals fauna in Lithuania</p>
+                            </div>
+                            <div class="message user-message">
+                                <img src="icons/user-icon.png" alt="User Icon" class="message-icon">
+                                <p>Hello! Can you tell me more about the fauna in Lithuania?</p>
+                            </div>
+                            <div class="message ai-message">
+                                <img src="icons/ai-icon.png" alt="AI Icon" class="message-icon">
+                                <p>Of course! Lithuania has a diverse range of wildlife, as an example you should checkout Lithuania's RedBook</p>
+                            </div>
+                            <div class="message user-message">
+                                <img src="icons/user-icon.png" alt="User Icon" class="message-icon">
+                                <p>Where can I find the RedBook of Lithuania?</p>
+                            </div>
+                            <div class="message ai-message">
+                                <img src="icons/ai-icon.png" alt="AI Icon" class="message-icon">
+                                <p>You can find it in our page next to downloadable material or in official Lithuania's Redbook website!</p>
+                            </div>
+                        </div>
+                        
+                        <form id="gpt3-form">
+                            <input id="input-text" type="text" placeholder="Type your message here...">
+                            <button type="submit" class="fancy-send-btn">Send</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/wildlifeconservationLT" target="_blank">Facebook</a> |
+                <a href="https://twitter.com/wildlifeconservationLT" target="_blank">Twitter</a> |
+                <a href="https://www.instagram.com/wildlifeconservationLT" target="_blank">Instagram</a>
+            </div>
+            <p>&copy; Wildlife Conservation in Lithuania 2023. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
