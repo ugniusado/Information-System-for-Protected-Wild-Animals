@@ -22,34 +22,39 @@
         </nav>
         <div class="language-selector">
             <a href="?lang=en">EN</a> |
-            <a href="?lang=lt">LT</a> |
-            <a href="?lang=ru">RU</a>
+            <a href="?lang=lt">LT</a>
         </div>
     </header>
     <div id="page-container">
         <main>
             <div class="container">
-                <h2>Contact Us</h2>
-                <form action="mailto:contact@wildlifeconservationLT.com" method="post" enctype="text/plain">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Send</button>
+                <h1>Report Spotted Animal</h1>
+                <form id="reportForm" method="POST" action="/spotted" enctype="multipart/form-data">
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="surname">Contact info:</label><br>
+                    <input type="text" id="surname" name="surname"><br>
+                    <label for="description">Description of an animal:</label><br>
+                    <input type="text" id="description" name="description"><br>
+                    <label for="file">Upload a photo of the animal that you captured or relevant proof:</label><br>
+                    <input type="file" id="file" name="file"><br>
+                    <input type="hidden" id="lat" name="lat">
+                    <input type="hidden" id="lng" name="lng">
+                    <p>Drag the pin to the location where the animal was spotted:</p>
+                    <div class="mapContainer">
+                        <div id="map"></div>
+                    </div>
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </main>
         <footer>
             <p>&copy; Wildlife Conservation in Lithuania 2023. All rights reserved.</p>
-            <div class="social-media-links">
-                <a href="https://www.facebook.com/wildlifeconservationLT" target="_blank">Facebook</a> |
-                <a href="https://twitter.com/wildlifeconservationLT" target="_blank">Twitter</a> |
-                <a href="https://www.instagram.com/wildlifeconservationLT" target="_blank">Instagram</a>
-            </div>
         </footer>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBChi_S2WctAhXNYkY9_zGVDJ_l98ibvqY&callback=initMap"
+        async defer></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

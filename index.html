@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildlife Conservation in Lithuania</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav aria-label="Primary">
+            <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="species/species.html">Species</a></li>
                 <li><a href="chatbot/index.html">Chatbot</a></li>
@@ -23,81 +23,196 @@
         </nav>
         <div class="language-selector">
             <a href="?lang=en">EN</a> |
-            <a href="?lang=lt">LT</a> |
-            <a href="?lang=ru">RU</a>
+            <a href="?lang=lt">LT</a>
         </div>
+        <h1>Wildlife Conservation in Lithuania</h1>
     </header>
 
-    <div id="page-container">
-        <main>
-            <section class="hero">
-                <h1>Wildlife Conservation in Lithuania</h1>
-                <p>Discover, learn, and contribute to the conservation of Lithuania's unique wildlife.</p>
-            </section>
-
-            <div class="container">
-                <section class="featured-content">
-                    <article>
-                        <h2>Latest News</h2>
-                        <img src="images/news-thumbnail.jpg" alt="News thumbnail">
-                        <p>New legislation passed to protect endangered species in Lithuania. <a href="news.html">Read
-                                more</a></p>
-                    </article>
-                    <article>
-                        <h2>Featured Species</h2>
-                        <img src="images/species-thumbnail.jpg" alt="Species thumbnail">
-                        <p>Learn about the European Bison, Lithuania's iconic species. <a
-                                href="species/european-bison.html">Read more</a></p>
-                    </article>
-                    <article>
-                        <h2>Success Stories</h2>
-                        <img src="images/success-thumbnail.jpg" alt="Success story thumbnail">
-                        <p>Discover how a local community saved a wetland habitat. <a
-                                href="success-stories/wetland-project.html">Read more</a></p>
-                    </article>
-                </section>
-
-                <section class="search">
-                    <h2>Search for Species and Conservation Efforts</h2>
-                    <form>
-                        <input type="search" name="search" placeholder="Search for species, projects...">
-                        <button type="submit">Search</button>
-                    </form>
-                </section>
-                <h2>Educational Resources</h2>
-                <section class="featured-resources">
-                    
-                    <article>
-                        <img src="images/resource-1.jpg" alt="Resource thumbnail">
-                        <h3>Conservation Basics</h3>
-                        <p>Learn about the key principles of wildlife conservation in Lithuania. <a
-                                href="resources/conservation-basics.html">Read more</a></p>
-                    </article>
-                    <article>
-                        <img src="images/resource-2.jpg" alt="Resource thumbnail">
-                        <h3>Threatened Habitats</h3>
-                        <p>Explore the main threats to Lithuania's wildlife habitats. <a
-                                href="resources/threatened-habitats.html">Read more</a </p>
-                    </article>
-                    <article>
-                        <img src="images/resource-3.jpg" alt="Resource thumbnail">
-                        <h3>Getting Involved</h3>
-                        <p>Find out how you can support wildlife conservation efforts in Lithuania. <a
-                                href="resources/getting-involved.html">Read more</a></p>
-                    </article>
-                </section>
-            </div>
-        </main>
-
-        <footer>
-            <p>&copy; Wildlife Conservation in Lithuania 2023. All rights reserved.</p>
-            <div class="social-media-links">
-                <a href="https://www.facebook.com/wildlifeconservationLT" target="_blank">Facebook</a> |
-                <a href="https://twitter.com/wildlifeconservationLT" target="_blank">Twitter</a> |
-                <a href="https://www.instagram.com/wildlifeconservationLT" target="_blank">Instagram</a>
-            </div>
-        </footer>
-    </div>
+    <main>
+        <section class="featured-content">
+            <article class="article-box">
+                <h2>Animal welfare and protection: EU actions</h2>
+                <img src="images/news1.jpg" alt="News thumbnail">
+                <p>The EU has some of the highest animal welfare standards in the world. Find out how the law protects
+                    farm and laboratory animals, wildlife and domestic pets.</p>
+                <a href="news.html">Read more</a>
+            </article>
+            <article class="article-box">
+                <h2>Animal welfare: MEPs seek to improve transport conditions</h2>
+                <img src="images/news2.jpg" alt="News thumbnail">
+                <p>Long journeys cause stress and suffering for the animals transported. The Parliament calls on EU
+                    countries to ensure their welfare more effectively.</p>
+                <a href="news.html">Read more</a>
+            </article>
+            <article class="article-box">
+                <h2>Biodiversity conservation: EU measures</h2>
+                <img src="images/news3.jpg" alt="News thumbnail">
+                <p>The EU wants to restore the continent's biodiversity to save endangered species and human life. Read
+                    the article to find out more.</p>
+                <a href="articles/newsbiodiversity.html">Read more</a>
+            </article>
+            <!-- similar blocks for other articles... -->
+        </section>
+        <section class="featured-content">
+            <article class="article-box">
+                <h2>Animal welfare and protection: EU actions</h2>
+                <img src="images/news1.jpg" alt="News thumbnail">
+                <p>The EU has some of the highest animal welfare standards in the world. Find out how the law protects
+                    farm and laboratory animals, wildlife and domestic pets.</p>
+                <a href="news.html">Read more</a>
+            </article>
+            <article class="article-box">
+                <h2>Animal welfare: MEPs seek to improve transport conditions</h2>
+                <img src="images/news2.jpg" alt="News thumbnail">
+                <p>Long journeys cause stress and suffering for the animals transported. The Parliament calls on EU
+                    countries to ensure their welfare more effectively.</p>
+                <a href="news.html">Read more</a>
+            </article>
+            <article class="article-box">
+                <h2>Biodiversity conservation: EU measures</h2>
+                <img src="images/news3.jpg" alt="News thumbnail">
+                <p>The EU wants to restore the continent's biodiversity to save endangered species and human life. Read
+                    the article to find out more.</p>
+                <a href="articles/newsbiodiversity.html">Read more</a>
+            </article>
+            <!-- similar blocks for other articles... -->
+        </section>
+        <style>
+        h1 {
+            text-align: center;
+           }
+        </style>
+        <h1>The IUCN Red List Categories and Criteria</h1>
+        <div class="swiper-container blog-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_dd-3c0d0ae8cd2f4488acf46a608631b9193cf6e650e42c84a15bab96d854d7c99e.svg"
+                            alt="Data Deficient Category Image">
+                        <h2>Data Deficient (DD)</h2>
+                        <p>A taxon is <strong>Data Deficient (DD)</strong> when there is inadequate information to make a direct, or
+                            indirect, assessment of its risk of extinction based on its distribution and/or population
+                            status.</p>
+                        <a href="/search?redListCategory=dd" class="read-more">See Species</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_lc-d3731e342769efbfd4604f953cfe3c4301a901253deb5f835cbb08eec5f1bc02.svg"
+                            alt="Least Concern Category Image">
+                        <h2>Least Concern (LC)</h2>
+                        <p>A taxon is <strong>Least Concern (LC)</strong> when it has been evaluated against the Red List criteria and
+                            does not qualify for Critically Endangered, Endangered, Vulnerable or Near Threatened.</p>
+                        <a href="/search?redListCategory=lc" class="read-more">See Species</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_nt-b1b4d7e271e9257d722fa2e9e9f4c5619b658e6f1d88f4e7da8edf8bce2a7ccb.svg"
+                            alt="Near Threatened Category Image">
+                        <h2>Near Threatened (NT)</h2>
+                        <p>A taxon is <strong>Near Threatened (NT)</strong> when it has been evaluated against the criteria but does not
+                            qualify for Critically Endangered, Endangered or Vulnerable now, but is close to qualifying
+                            for or is likely to qualify for a threatened category in the near future.</p>
+                        <a href="/search?redListCategory=nt" class="read-more">See Species</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_vu-a498d553d90492b82044d2046ee9d6a16af6fe94c9ab59529950a6f62ab1a9a1.svg" 
+                            alt="Vulnerable Category Image">
+                        <h2>Vulnerable (VU)</h2>
+                        <p>
+                            A taxon is <strong>Vulnerable (VU)</strong> when the best available evidence indicates that it meets any of the criteria A to E for Vulnerable, and it is therefore considered to be facing a high risk of extinction in the wild.
+                            
+                        </p>
+                        <a href="/search?redListCategory=vu" class="read-more">See Species</a>
+                    </div>
+                </div>
+                
+                <!-- Slide for EN -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_en-3d09fbfbe01ad6207d5ba4226eb0d8ea2310317f027a8aabe3bbedb74857a309.svg" 
+                            alt="Endangered Category Image">
+                        <h2>Endangered (EN)</h2>
+                        <p>
+                            A taxon is <strong>Endangered (EN)</strong> when the best available evidence indicates that it meets any of the criteria A to E for Endangered, and it is therefore considered to be facing a very high risk of extinction in the wild.
+                            
+                        </p>
+                        <a href="/search?redListCategory=en" class="read-more">See Species</a>
+                    </div>
+                </div>
+                
+                <!-- Slide for CR -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_cr-3ec06b34573557e2b90a84b1659eae2d61024950f7d28509519a5f7e3758b71e.svg" 
+                            alt="Critically Endangered Category Image">
+                        <h2>Critically Endangered (CR)</h2>
+                        <p>
+                            A taxon is <strong>Critically Endangered (CR)</strong> when the best available evidence indicates that it meets any of the criteria A to E for Critically Endangered, and it is therefore considered to be facing an extremely high risk of extinction in the wild.
+                            
+                        </p>
+                        <a href="/search?redListCategory=cr" class="read-more">See Species</a>
+                    </div>
+                </div>
+                
+                <!-- Slide for EW -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_ew-d3e64d0f3ef6f89a4406dc6f882b9dafa6a3738fa2bb68e442523d42743d96df.svg" 
+                            alt="Extinct in the Wild Category Image">
+                        <h2>Extinct in the Wild (EW)</h2>
+                        <p>
+                            A taxon is <strong>Extinct In The Wild (EW)</strong> when it is known only to survive in cultivation, in captivity or as a naturalized population (or populations) well outside the past range. A taxon is presumed Extinct in the Wild when exhaustive surveys in known and/or expected habitat, at appropriate times (diurnal, seasonal, annual), throughout its historic range have failed to record an individual. Surveys should be over a time frame appropriate to the taxon's life cycle and life form.
+                            
+                        </p>
+                        <a href="/search?redListCategory=ew" class="read-more">See Species</a>
+                    </div>
+                </div>
+                
+                <!-- Slide for EX -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_ex-5aa9fe2bfb20930fdec6d1c5b619f81b6e2fdd56de9d10984b0aef3801bcb9a2.svg" 
+                            alt="Extinct Category Image">
+                        <h2>Extinct (EX)</h2>
+                        <p>
+                            A taxon is <strong>Extinct (EX)</strong> when there is no reasonable doubt that the last individual has died. A taxon is presumed Extinct when exhaustive surveys in known and/or expected habitat, at appropriate times (diurnal, seasonal, annual), throughout its historic range have failed to record an individual. Surveys should be over a time frame appropriate to the taxon's life cycle and life form.
+                            
+                        </p>
+                        <a href="/search?redListCategory=ex" class="read-more">See Species</a>
+                    </div>
+                </div>
+                
+                <!-- Slide for NE -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="https://nrl.iucnredlist.org/assets/category-lg/category-lg_ne-4ba5db90bdb573b08059b7e8348a704a1419100a5ab42ba43ba9c6aa4bbdf5a6.svg" 
+                            alt="Not Evaluated Category Image">
+                        <h2>Not Evaluated (NE)</h2>
+                        <p>
+                             A taxon is <strong>Not Evaluated (NE)</strong>  when it has not yet undergone assessment against the specified criteria to determine its conservation status, population trends, habitat requirements, or any other relevant attributes. This classification is applied to taxa for which there is insufficient information available to make an evaluation or when the evaluation process has not been conducted.
+                            
+                        </p>
+                        
+                        <a href="/search?redListCategory=ne" class="read-more">See Species</a>
+                    </div>
+                </div>
+            <!-- similar blocks for other slides... -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination blog-slider__pagination"></div>
+        <div class="swiper-pagination"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Wildlife Conservation in Lithuania 2023. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="slider.js"></script>
 </body>
 
 </html>

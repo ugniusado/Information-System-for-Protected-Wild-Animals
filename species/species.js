@@ -1,11 +1,12 @@
-function parseCSV(text) {
-  const rows = text.split('\n').slice(1);
-  const species = rows.map(row => {
-    const [scientific_name, common_name, conservation_status, habitat, threats, information, image] = row.split(',');
-    return { scientific_name, common_name, conservation_status, habitat, threats, information, image };
-  });
-  return species;
+function fetchSpecies() {
+  return fetch('http://localhost:4000/species')
+    .then(response => response.json())
+    .then(data => {
+      speciesData = data;
+      displaySpeciesList(speciesData);
+    });
 }
+fetchSpecies();
 
 function createListItem(species) {
   const listItem = document.createElement('li');
@@ -17,9 +18,15 @@ function createListItem(species) {
   speciesImage.classList.add('species-image');
   listItem.appendChild(speciesImage);
 
-  const speciesName = document.createElement('span');
-  speciesName.textContent = species.common_name;
-  listItem.appendChild(speciesName);
+  const speciesCommonName = document.createElement('span');
+  speciesCommonName.textContent = species.common_name;
+  speciesCommonName.classList.add('common-name');
+  listItem.appendChild(speciesCommonName);
+
+  const speciesScientificName = document.createElement('span');
+  speciesScientificName.textContent = `(${species.scientific_name})`;
+  speciesScientificName.classList.add('scientific-name');
+  listItem.appendChild(speciesScientificName);
 
   listItem.addEventListener('click', function () {
     window.location.href = `species_detail.html?name=${species.scientific_name}`;
@@ -60,21 +67,46 @@ function searchSpecies() {
   }
 }
 
-function displaySpeciesList(species) {
-  const speciesList = document.getElementById('species-list');
-  speciesList.innerHTML = '';
-
-  for (const item of species) {
-    const listItem = createListItem(item);
-    speciesList.appendChild(listItem);
-  }
+function displaySpeciesList(speciesList) {
+  const ul = document.getElementById('species-list');
+  ul.innerHTML = "";  // clear the list before appending items
+  speciesList.forEach(species => {
+      const li = createListItem(species);
+      ul.appendChild(li);
+  });
 }
 
-let speciesData = [];
+let uniqueStatuses = [];
 
-fetch('species.csv')
-  .then(response => response.text())
-  .then(data => {
-    speciesData = parseCSV(data);
-    displaySpeciesList(speciesData);
+function fetchSpecies() {
+  return fetch('http://localhost:4000/species')
+    .then(response => response.json())
+    .then(data => {
+      speciesData = data;
+
+      // Get unique conservation statuses
+      uniqueStatuses = [...new Set(speciesData.map(species => species.conservation_status))];
+
+      generateStatusButtons();
+      displaySpeciesList(speciesData);
+    });
+}
+
+function generateStatusButtons() {
+  const statusContainer = document.getElementById('conservation-status');
+
+  uniqueStatuses.forEach(status => {
+    const button = document.createElement('button');
+    button.textContent = status.slice(0, 2).toUpperCase(); // Display only first two letters of status
+    button.addEventListener('click', function () {
+      sortSpeciesByStatus(status);
+    });
+
+    statusContainer.appendChild(button);
   });
+}
+
+function sortSpeciesByStatus(status) {
+  const filteredSpecies = speciesData.filter(species => species.conservation_status === status);
+  displaySpeciesList(filteredSpecies);
+}

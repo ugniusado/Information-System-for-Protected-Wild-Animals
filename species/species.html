@@ -23,48 +23,40 @@
     </nav>
     <div class="language-selector">
       <a href="?lang=en">EN</a> |
-      <a href="?lang=lt">LT</a> |
-      <a href="?lang=ru">RU</a>
+      <a href="?lang=lt">LT</a>
     </div>
   </header>
   <div id="page-container">
     <main>
+      <section class="search">
+        <h2>Search for Species and Conservation Efforts</h2>
+        <form>
+          <input type="search" id="search-input" name="search" placeholder="Search for species, projects...">
+        <button type="button" onclick="searchSpecies()">Search</button>
+        </form>
+      </section>
+      <div class="container">
+        
+        ...
+      </div>
       <div class="container">
         <section class="species-list">
-          <h2>Species Liste</h2>
+          <h2>Species List</h2>
+          <h3>Sort by Conservation Statuses</h3>
+          <section class="conservation-status-list">
+            <div id="conservation-status"></div>
+          </section>
+          <h3>Sort by name</h3>
           <button onclick="sortSpeciesList('asc')">Sort A-Z</button>
           <button onclick="sortSpeciesList('desc')">Sort Z-A</button>
           <ul id="species-list"></ul>
-        </section>
-        <section class="search">
-          <h2>Search for Species and Conservation Efforts</h2>
-          <form>
-            <input type="search" id="search-input" name="search" placeholder="Search for species, projects...">
-          <button type="button" onclick="searchSpecies()">Search</button>
-          </form>
         </section>
       </div>
     </main>
     <footer>
       <p>&copy; Wildlife Conservation in Lithuania 2023. All rights reserved.</p>
-      <div class="social-media-links">
-          <a href="https://www.facebook.com/wildlifeconservationLT" target="_blank">Facebook</a> |
-          <a href="https://twitter.com/wildlifeconservationLT" target="_blank">Twitter</a> |
-          <a href="https://www.instagram.com/wildlifeconservationLT" target="_blank">Instagram</a>
-      </div>
   </footer>
   </div>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Replace 'loadSpeciesList();' with the code provided in species.js
-    fetch('species.csv')
-    .then(response => response.text())
-    .then(data => {
-      // ... (rest of the code from species.js)
-    });
-  });
-</script>
-
 </body>
 
 </html>

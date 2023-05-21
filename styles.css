@@ -6,16 +6,16 @@
 }
 
 body {
-  background: #f6f9fc;
+  background: #e8f0ff;
   color: #333;
   line-height: 1.6;
 }
 
 header {
-  background-color: #333;
+  background-color: #005f63;
   color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 1rem 0;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
@@ -23,6 +23,7 @@ nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  padding: 20px 0;
 }
 
 nav ul li {
@@ -36,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #63000f;
   border-radius: 4px;
 }
 
@@ -50,13 +51,12 @@ nav ul li a:hover {
 }
 
 .hero {
-  background-image: url('images/hero-background.jpg');
   background-size: cover;
-  background-position: center;
-  padding: 4rem 0;
-  text-align: center;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-position: center;
+    padding: 4rem 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
@@ -151,12 +151,19 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #333;
+  padding: 20px 0;
+  background-color: #005f63;
   color: #fff;
   text-align: center;
-  padding: 2rem 0;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.social-media-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
 
 .social-media-links a {
   color: #fff;
@@ -222,10 +229,19 @@ footer {
 
 .species-list ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   list-style-type: none;
   padding: 0;
+}
+
+.species-list .common-name {
+  font-weight: bold;
+}
+
+.species-list .scientific-name {
+  font-style: italic;
+  color: #555;
 }
 
 .species-list li {
@@ -394,4 +410,126 @@ h2 {
   padding: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+form input[type="text"],
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background: #0056b3;
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.resource-image {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.resource-details {
+  flex: 1;
+}
+
+.resource-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.resource-details p {
+  margin-bottom: 10px;
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.resource-link:hover {
+  background-color: #0056b3;
+}
+
+#conservation-status button {
+  background-color: #4CAF50; /* green */
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 10px 24px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#conservation-status button:hover {
+  background-color: #45a049;
+}
+
+.species-list button {
+  background-color: #008CBA; /* Blue color */
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 10px 24px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.species-list button:hover {
+  background-color: #007B9A; /* Darken blue color on hover */
+}
+
 
