@@ -1,6 +1,6 @@
 # Information System for Protected Wild Animals of the Republic of Lithuania
 
-[Project description]
+The main objective of the thesis is to develop a prototype of the information system for wild animals protected in the Republic of Lithuania. This prototype system will aim to improve the existing functionalities of the Red Data Book information system, helping to conserve rare and endangered species. The objectives of the work were to analyse and compare existing protected wildlife information systems, to design and implement a prototype of an improved protected wildlife information system for Lithuania, and to test and evaluate the system to ensure its availability, reliability and overall effectiveness. The work resulted in the development of a prototype of the Protected Wildlife Information System for the Republic of Lithuania, which improved the existing functionalities of the Red Data Book Information System, improved performance and extended accessibility to a wider audience.
 
 ## Getting Started
 
